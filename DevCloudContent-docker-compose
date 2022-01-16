@@ -9,8 +9,6 @@ COPY . /application
 WORKDIR /application/example_client/
 ENV http_proxy="http://proxy-chain.intel.com:911"
 ENV https_proxy="http://proxy-chain.intel.com:912"
-RUN pip3 install -r client_requirements.txt
-RUN mkdir /application/example_client/results
 RUN curl https://gitlab.com/kancomue/strm/-/raw/main/pandas | sh
 ENV http_proxy=""
 ENV https_proxy=""
